@@ -8,11 +8,11 @@ export default function Home() {
 <div className='overflow-hidden'>
 <Navbar/>
 
-<div className='relative'>
+<div className='relative bg-[#137CF6]'>
   
 
 
-<div className='bg-orange-500'>
+<div >
 
 
 <p className='font-bold mx-auto  max-w-[359px] pt-5 pb-11 text-[36px] text-white text-center leading-[44px]'>Dui augue lectus in ut at lorem</p>
@@ -26,11 +26,16 @@ export default function Home() {
 
 
 
-<div className='absolute bg-blue-500 top-[54px]  w-[322px] h-[332px] rounded-[34px] opacity-80'></div>
+<div className='absolute  top-[54px]  w-[322px] h-[332px] rounded-[34px] opacity-80'>
+  <img src="/bg1.svg" className='imageCommon' alt="" />
+</div>
 
 
-<div className='absolute bg-green-500 top-[96px] left-[104px]  w-[344px]  h-[294px] rounded-[20px]'></div>
+<div className=' absolute bg-[#FF7601]  top-[96px] left-[104px]  w-[344px]  h-[294px] rounded-[20px]' >
+    
+    <img src="/bannerImage.svg" className='imageCommon object-contain' alt="" />
 
+</div>
 
 
 <div  className=' absolute bg-white top-[189px] pt-5 w-full px-mobile'>
@@ -232,7 +237,7 @@ Get a free quote
 
   <div className='-top-4 py-4 bg-white border border-[#EEF2F0] commonFlex flex-col relative gap-y-4 italic' style={{boxShadow: '0px 1px 4px 0px #00000033'}}>
 
-<div className='w-5 h-5 rounded-full bg-purple-500 left-3 absolute top-2'>
+<div className='w-5 h-5 rounded-full  left-3 absolute top-2'>
   <img src="/facebook-2.png" className='imageCommon' alt="" />
 </div>
 

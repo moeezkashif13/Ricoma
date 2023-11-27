@@ -13,7 +13,7 @@ export default function Footer(){
 <div>
     
 
-<div className="h-[176px] bg-cover bg-center  rounded-lg commonFlex" style={{backgroundImage:'url(/footerthumbnail.png)'}}>
+<div className="h-[176px] bg-cover bg-center   rounded-lg commonFlex" style={{backgroundImage:'url(/footerthumbnail.png)'}}>
     <div className="w-[68px] h-[68px] rounded-full bg-red-500 commonFlex">
         <div className="w-10 h-8 commonFlex pl-2">
             <img src="/play.svg" className="imageCommon  object-contain" alt="" />
@@ -78,7 +78,7 @@ export default function Footer(){
 
 
 
-<div className="flex justify-between  w-[341px] leading-6 text-sm items-center">
+<div className="flex gap-x-3 px-3  w-[341px] leading-6 text-xs items-center">
 
     <p>
         <span className="font-bold text-[20px]">00</span>
