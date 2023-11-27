@@ -3,6 +3,14 @@
 import Link from "next/link";
 import {CloseButton, NavbarHamburger} from "./NavbarHamburger";
 
+const NavLinks = [
+
+    {text:'Home',href:'/'},
+    {text:'Products',href:'/second-page'},
+    {text:'About',href:'/second-page'},
+
+]
+
 
 const NavigationMenuMobile = ()=>{
 
@@ -11,9 +19,9 @@ const NavigationMenuMobile = ()=>{
 
 <div className="flex items-center px-6">
 <div className="flex gap-x-3 items-center">
-    <div className="w-8 h-8 rounded-md">
+    <Link href='/' className="w-8 h-8 rounded-md">
         <img src="/logo-2.svg" className="imageCommon" alt="" />
-    </div>
+    </Link>
     <p className="font-bold ">Distributor Portal</p>
 </div>
 
@@ -24,16 +32,14 @@ const NavigationMenuMobile = ()=>{
 
 
 
-
-
 <div className="mt-11 px-3  space-y-2 font-semibold text-sm leading-5">
 
 
-{[1,2,3].map(()=>{
-    return <div style={{transition:'all 0.4s'}} className="rounded-md w-[218px] px-6 space-x-5 py-3.5  hover:bg-[#0F2E69] ">
+{NavLinks.map((eachLink)=>{
+    return <Link href={eachLink.href} style={{transition:'all 0.4s'}} className="rounded-md w-[218px] px-6 space-x-5 py-3.5  hover:bg-[#0F2E69] block">
         <span className="inline-block w-5 h-5 ">ic</span>
-        <span>Home</span>
-    </div>
+        <span>{eachLink.text}</span>
+    </Link>
 })}
 
 
@@ -64,16 +70,19 @@ export default async function Navbar(){
 </div>
 
 
-<div className="w-[103px] ">
+<Link href='/' className="w-[103px] ">
     <img src='/logo.svg' className="imageCommon object-contain " alt="" />
-</div>
+</Link>
 
 
 <div className="hidden md:flex uppercase gap-x-16 text-white font-semibold text-sm leading-5">
 
-    <Link href='/'>Home</Link>
-    <Link href='/second-page' className="text-[#F17D21]">PRODUCTS</Link>
-    <Link href='/second-page'>ABOUT</Link>
+{NavLinks.map(eachLink=>{
+    return     <Link href={eachLink.href}>{eachLink.text}</Link>
+})}
+
+
+
 
 </div>
 

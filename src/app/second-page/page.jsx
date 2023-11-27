@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ProductDetails from "@/components/ProductPage/ProductDetails";
 
 export default function SecondPage(){
 
@@ -19,8 +20,11 @@ export default function SecondPage(){
 <div className="space-y-6 pt-4 lg:pt-20 pb-6 lg:pb-14 md:flex md:flex-wrap md:space-y-0 md:justify-between md:gap-y-6">
 
 
-{[1,2,3].map(()=>{
-    return <div className="shadow-2xl md:w-[calc(50%-10px)] lg:w-[calc(33%-5px)] lg:max-w-[360px]">
+{[1,2,3].map((elem,index)=>{
+    return <div className="shadow-2xl md:w-[calc(50%-10px)] lg:w-[calc(33%-5px)] lg:max-w-[360px] relative" >
+
+<ProductDetails index={index}  />
+
 
 
 <div className="w-full min-w-[270px] relative h-[216px] rounded-t-2xl bg-[#C4C4C4] commonFlex">

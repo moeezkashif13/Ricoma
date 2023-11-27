@@ -142,7 +142,7 @@ const DesktopFooter = ()=>{
     <div className="w-[250px] h-[64px] ">
         <img src="/logo.svg" className="imageCommon" alt="" />
     </div>
-    <div className="flex gap-x-3 mt-11">
+    <div className="flex justify-between mt-11">
             {[1,2,3,4,5].map(()=>{
                 return <div className="w-5 h-6 ">
                     <img src="/socialmedia/facebook.svg" className="imageCommon object-contain" alt="" />
