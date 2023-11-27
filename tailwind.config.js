@@ -11,6 +11,9 @@ module.exports = {
       padding:{
         mobile:'29px',
       },
+      screens:{
+        desktop1 : '1200px'
+      },
       backgroundColor:{
         primary: '#002045',
         secondary : '#E27838'

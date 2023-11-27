@@ -13,7 +13,7 @@ export const NavbarHamburger = ()=>{
             }
 
 
-    return <div className=" w-[41px] h-[27px] " onClick={showHamburger}>
+    return <div className="md:hidden  w-[41px] h-[27px]  cursor-pointer " onClick={showHamburger}>
 
     <img src="/hamburger.svg" className="imageCommon" alt="" />
     

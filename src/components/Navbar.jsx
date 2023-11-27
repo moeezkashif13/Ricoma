@@ -1,10 +1,12 @@
 
 
+import Link from "next/link";
 import {CloseButton, NavbarHamburger} from "./NavbarHamburger";
 
 
 const NavigationMenuMobile = ()=>{
-    return <>
+
+    return <div >
 
 
 <div className="flex items-center px-6">
@@ -45,7 +47,7 @@ const NavigationMenuMobile = ()=>{
 </div>
 
 
-</>
+</div>
 }
 
 
@@ -55,6 +57,7 @@ export default async function Navbar(){
 
 
     return <div className="px-mobile bg-primary py-[19px] flex justify-between items-center relative z-40"> 
+
 
 <div style={{transition:'all 0.5s'}} className="fixed h-full pt-6 hiddenNav  w-[calc(100%-60px)] bg-[#002045] text-white top-0 z-40 -right-[100%]">
 <NavigationMenuMobile/>
@@ -66,9 +69,27 @@ export default async function Navbar(){
 </div>
 
 
+<div className="hidden md:flex uppercase gap-x-16 text-white font-semibold text-sm leading-5">
+
+    <Link href='/'>Home</Link>
+    <Link href='/second-page' className="text-[#F17D21]">PRODUCTS</Link>
+    <Link href='/second-page'>ABOUT</Link>
+
+</div>
+
+
+
+
 <div className="flex gap-x-7 items-center">
 
-<div className="bg-orange-500 w-[47px] h-[37px] "></div>
+<div className=" w-[47px] h-[37px] relative">
+
+    <img src="/cart.svg" className="imageCommon" alt="" />
+
+<div className="w-6 h-6 rounded-full bg-[#0076FF] border-2 border-[#131921] absolute -right-2 -top-2 commonFlex font-bold text-xs leading-4 text-white">2</div>
+
+
+</div>
 
 
 <NavbarHamburger  />

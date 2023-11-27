@@ -8,19 +8,19 @@ export default function SecondPage(){
 <Navbar/>
 
 
-<div className="px-7 pt-8">
+<div className="px-7 pt-8   desktop1:max-w-[1150px] desktop1:mx-auto ">
 
-<p className="text-[#002045] font-bold text-[40px] leading-10 text-center">Dui augue lectus </p>
+<p className="text-[#002045] font-bold text-[40px] leading-10 text-center sm:text-left">Dui augue lectus </p>
 
 
 <p className="font-light text-2xl leading-10 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa leo nec ultrices sit risus nisi non fermentum morbi. Tristique.</p>
 
 
-<div className="space-y-6 pt-4 pb-6">
+<div className="space-y-6 pt-4 lg:pt-20 pb-6 lg:pb-14 md:flex md:flex-wrap md:space-y-0 md:justify-between md:gap-y-6">
 
 
 {[1,2,3].map(()=>{
-    return <div className="shadow-2xl">
+    return <div className="shadow-2xl md:w-[calc(50%-10px)] lg:w-[calc(33%-5px)] lg:max-w-[360px]">
 
 
 <div className="w-full min-w-[270px] relative h-[216px] rounded-t-2xl bg-[#C4C4C4] commonFlex">
@@ -67,7 +67,7 @@ export default function SecondPage(){
 
 <p className="text-[#081F32] font-semibold text-[28px]">$5999</p>
 
-<p className="text-[#F17D21] text-[20px] ">$7500</p>
+<p className="text-[#F17D21] text-[20px] line-through">$7500</p>
 
 
 <div className="font-bold text-sm  bg-[#F17D21] text-white w-[114px] commonFlex py-2.5 rounded-md">ORDER</div>
