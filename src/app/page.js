@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
 
-<div>
+<div className='overflow-hidden'>
 <Navbar/>
 
 <div className='relative'>
@@ -15,7 +15,7 @@ export default function Home() {
 <div className='bg-orange-500'>
 
 
-<p className='font-bold mx-auto  w-[359px] pt-5 pb-11 text-[40px] text-white text-center leading-[44px]'>Dui augue lectus in ut at lorem</p>
+<p className='font-bold mx-auto  max-w-[359px] pt-5 pb-11 text-[36px] text-white text-center leading-[44px]'>Dui augue lectus in ut at lorem</p>
 
 
 <div  className='relative z-20'>
@@ -39,19 +39,19 @@ export default function Home() {
 <p className='font-bold text-[22px] leading-6 text-center'>Fill out the form to secure the best deal!</p>
 
 
-<div className='flex flex-wrap my-5 justify-between gap-y-4'>
+<div className='flex flex-wrap my-5 justify-between gap-y-2 '>
 
 
 {[1,2,3,4].map(()=>{
-  return <div className='w-[calc(161px-2.5px)] border border-[#AFAFAF] bg-orange-500 px-5 py-4 rounded-md'>
+  return <div className='  w-[calc(50%-5px)] max-w-[243px] bg-[#FAFAFC]  border border-[#AFAFAF]  px-5 py-4 rounded-md'>
 
-    <input type="text" className='w-full bg-transparent outline-none' placeholder='First Name' name="" id="" />
+    <input type="text" className='w-full bg-transparent outline-none' placeholder='First Name*' name="" id="" />
 
 
   </div>
 })}
 
-<div className='w-full border border-[#AFAFAF] bg-orange-500 px-5 py-4 rounded-md'>
+<div className='w-full  bg-[#FAFAFC]  border border-[#AFAFAF] px-5 py-4 rounded-md'>
 
     <input type="text" className='w-full bg-transparent outline-none' placeholder='Country' name="" id="" />
 
@@ -71,11 +71,17 @@ Get a free quote
 <div className="mt-4 ">
 
 
-<div className='flex bg-green-500 gap-x-3 items-center justify-center'>
+<div className='commonFlex gap-x-3 '>
 
-<div className='w-[75px] h-[75px] bg-red-500'></div>
-<div className='w-[142px] h-[46px] bg-indigo-500'></div>
-<div className='w-[47px] h-[47px] bg-pink-500'></div>
+<div className='max-w-[75px] h-[75px] '>
+  <img src="/icon1.png" className='imageCommon' alt="" />
+</div>
+<div className='max-w-[142px] h-[46px] '>
+  <img src="/icon2.png" className='imageCommon' alt="" />
+</div>
+<div className='max-w-[47px] h-[47px] '>
+  <img src="/icon3.png" className='imageCommon' alt="" />
+</div>
 
 </div>
 
@@ -154,7 +160,9 @@ Get a free quote
 {[1,2,3].map(()=>{
   return <div className='flex justify-center gap-x-9 py-6  border-b-2 border-[#EEEFF2] last:border-0'>
 
-    <div className='w-[55px] h-[55px] rounded-full bg-[#FFECEC] flex justify-center items-center'></div>
+    <div className='w-[55px] h-[55px] rounded-full bg-[#FFECEC] commonFlex'>
+      <img src="/support.svg"  alt="" />
+    </div>
 
 
   <div>
@@ -195,7 +203,7 @@ Get a free quote
 <div className='pt-56'>
 
 
-<div className='w-[375px]  mx-auto'>
+<div className='w-[calc(100%-15px)]  mx-auto'>
 
 
 <p className='text-center font-bold text-[28px] leading-8 pb-8 '>Mi tempus ultrices est tempus nibh eu vitae in.</p>
@@ -269,7 +277,7 @@ Get a free quote
 
   </div>
 
-  <p className='leading-7 w-[340px]  mx-auto text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur auctor malesuada hendrerit nec, porttitor nunc tristique. Egestas eget fermentum at eget nunc et nisi eu lorem.</p>
+  <p className='leading-7 max-w-[330px]  mx-auto text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur auctor malesuada hendrerit nec, porttitor nunc tristique. Egestas eget fermentum at eget nunc et nisi eu lorem.</p>
 
 
 <div className='w-[320px] h-[72px] commonFlex  mx-auto font-extrabold text-[19px] leading-5 text-white bg-[#FE8101]' style={{boxShadow: '0px 4px 5px -1px #EE1D240A , 0px 4px 5px -1px #1D58EE24'}}>Dolor.</div>

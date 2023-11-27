@@ -103,7 +103,7 @@ export default function Footer(){
     <p>
         <span className="font-bold text-[20px]">45</span>
         <span> Seconds</span>
-        <span> :</span>
+
     </p>
 
 </div>
