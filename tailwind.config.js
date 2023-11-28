@@ -14,7 +14,7 @@ module.exports = {
       screens:{
         desktop1 : '1200px'
       },
-      backgroundColor:{
+      colors:{
         primary: '#002045',
         secondary : '#E27838'
       }

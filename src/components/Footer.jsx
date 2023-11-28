@@ -1,4 +1,4 @@
-const YellowBanner = ()=><div className="bg-[#FCD002] pt-2 pb-4 gap-y-3 flex flex-col md:flex-row items-center px-6 text-center md:justify-between">
+export const YellowBanner = ()=><div className="bg-[#FCD002] pt-2 pb-4 gap-y-3 flex flex-col md:flex-row items-center px-6 text-center md:justify-between">
 
 
 <div>

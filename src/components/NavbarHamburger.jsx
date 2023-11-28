@@ -13,17 +13,40 @@ export const NavbarHamburger = ()=>{
             }
 
 
-    return <div className="md:hidden  w-[41px] h-[27px]  cursor-pointer " onClick={showHamburger}>
+        const showCart = ()=>{
+
+            
+
+        }
+
+
+
+
+    return <>
+    
+    <div onClick={showCart} className=" w-[47px] h-[37px] relative">
+
+    <img src="/cart.svg" className="imageCommon" alt="" />
+
+<div className="w-6 h-6 rounded-full bg-[#0076FF] border-2 border-[#131921] absolute -right-2 -top-2 commonFlex font-bold text-xs leading-4 text-white">2</div>
+
+
+</div>
+
+<div className="md:hidden  w-[41px] h-[27px]  cursor-pointer " onClick={showHamburger}>
 
     <img src="/hamburger.svg" className="imageCommon" alt="" />
     
     
     </div>
+
+    </>
+
 }
 
 
 export const CloseButton = ()=>{
-    return <div onClick={()=>{
+    return  <div onClick={()=>{
 
         document.querySelector('.hiddenNav').classList.remove('right-0')
         document.querySelector('.hiddenNav').classList.add('-right-[100%]')

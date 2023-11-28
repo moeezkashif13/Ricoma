@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import {CloseButton, NavbarHamburger} from "./NavbarHamburger";
+import { YellowBanner } from "./Footer";
 
 const NavLinks = [
 
@@ -57,6 +58,127 @@ const NavigationMenuMobile = ()=>{
 }
 
 
+const YourCart = ()=>{
+
+    return <div className="relative  h-full" >
+
+
+<div className="px-6 ">
+
+<div className="flex text-black border-b pb-2 items-center mb-8 border-[#F0F0F5]">
+    <div className="font-bold text-2xl leading-8">Your Cart</div>
+<div className="ml-auto text-[#82828B]">icon</div>
+</div>
+
+
+
+<div className=" space-y-5">
+
+
+{[1,2].map(()=>{
+    return <div className="flex  gap-x-4 pb-5 border-b border-[#F0F0F5]">
+
+        <div className="w-[77px] h-[77px] rounded-md bg-[#F9F9F9] commonFlex">
+
+    <div className="w-[62px] h-[67px] ">
+    <img src="/machine-3.png" className="imageCommon " alt="" />
+    </div>
+
+
+        </div>
+
+
+    <div className=" flex-grow space-y-1.5">
+
+<div className="flex leading-5 justify-between">
+    <p className="font-extrabold text-primary text-[20px] ">EM-1010</p>
+    <p className="">$5999</p>
+</div>
+
+<div className="text-sm space-y-0.5 leading-5 text-[#565657]">
+<p >Starter Embroidery Machine</p>
+<p >10-needle | Single-head</p>
+</div>
+
+<div className="flex justify-between">
+
+
+<div className="flex gap-x-5">
+
+<div className="w-5 h-5 rounded-full bg-[#F0F0F5] text-[#6E70FF] commonFlex">ic</div>
+<p className="text-sm leading-5 text-black">1</p>
+<div className="w-5 h-5 rounded-full bg-[#F0F0F5] text-[#6E70FF] commonFlex">ic</div>
+
+
+</div>
+
+
+
+
+<div className="flex gap-x-2.5">
+    <p className="text-[#474747]">Colors</p>
+    <div className="flex px-1.5 items-center rounded-[30px] bg-[#D0D0D0CC] gap-x-2 border border-[#BEBEBE33]" style={{boxShadow: '5px 5px 20px 0px #B5B5B533'}}>
+        <div className="w-4 h-4 rounded-full bg-[#22144A]"></div>
+        <div className="w-4 h-4 rounded-full bg-[#60C250]"></div>
+        <div className="w-4 h-4 rounded-full bg-[#370405]"></div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+
+    </div>
+
+
+
+    </div>
+})}
+
+
+
+</div>
+
+
+<div className="flex mt-6 mb-7 text-2xl leading-7 text-black">
+
+<p >Order Total</p>
+
+<p className="ml-auto">$14 226</p>
+
+</div>
+
+
+<div className="bg-[#0076FF] py-3 text-center rounded-md">
+
+Checkout
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+<div className="absolute bottom-0  w-full  bg-red-500">
+    <YellowBanner/>
+</div>
+
+
+
+    </div>
+
+}
+
+
+
 export default async function Navbar(){
 
 
@@ -68,6 +190,12 @@ export default async function Navbar(){
 <div style={{transition:'all 0.5s'}} className="fixed h-full pt-6 hiddenNav  w-[calc(100%-60px)] bg-[#002045] text-white top-0 z-40 -right-[100%]">
 <NavigationMenuMobile/>
 </div>
+
+
+<div style={{transition:'all 0.5s'}} className="  pt-11   bg-white w-full h-full text-white top-0 z-40 fixed right-0  ">
+<YourCart/>
+</div>
+
 
 
 <Link href='/' className="w-[103px] ">
@@ -91,14 +219,7 @@ export default async function Navbar(){
 
 <div className="flex gap-x-7 items-center">
 
-<div className=" w-[47px] h-[37px] relative">
 
-    <img src="/cart.svg" className="imageCommon" alt="" />
-
-<div className="w-6 h-6 rounded-full bg-[#0076FF] border-2 border-[#131921] absolute -right-2 -top-2 commonFlex font-bold text-xs leading-4 text-white">2</div>
-
-
-</div>
 
 
 <NavbarHamburger  />
