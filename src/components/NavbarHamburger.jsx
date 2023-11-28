@@ -15,7 +15,8 @@ export const NavbarHamburger = ()=>{
 
         const showCart = ()=>{
 
-            
+            document.querySelector('.showCartComp').classList.remove('-top-[100%]')
+            document.querySelector('.showCartComp').classList.add('top-0')
 
         }
 

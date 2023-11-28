@@ -3,6 +3,7 @@
 import Link from "next/link";
 import {CloseButton, NavbarHamburger} from "./NavbarHamburger";
 import { YellowBanner } from "./Footer";
+import { CloseCart } from "./CartRelated/Cart";
 
 const NavLinks = [
 
@@ -65,10 +66,8 @@ const YourCart = ()=>{
 
 <div className="px-6 ">
 
-<div className="flex text-black border-b pb-2 items-center mb-8 border-[#F0F0F5]">
-    <div className="font-bold text-2xl leading-8">Your Cart</div>
-<div className="ml-auto text-[#82828B]">icon</div>
-</div>
+
+<CloseCart/>
 
 
 
@@ -167,7 +166,7 @@ Checkout
 
 
 
-<div className="absolute bottom-0  w-full  bg-red-500">
+<div className="absolute bottom-0  w-full  bg-red-500 text-black">
     <YellowBanner/>
 </div>
 
@@ -192,7 +191,7 @@ export default async function Navbar(){
 </div>
 
 
-<div style={{transition:'all 0.5s'}} className="  pt-11   bg-white w-full h-full text-white top-0 z-40 fixed right-0  ">
+<div style={{transition:'all 0.5s'}} className="showCartComp  pt-11   bg-white w-full h-full text-white -top-[100%] z-40 fixed right-0 ">
 <YourCart/>
 </div>
 
