@@ -4,12 +4,26 @@ import ProductDetails from "@/components/ProductPage/ProductDetails";
 
 export default function SecondPage(){
 
-    return <div>
+    return <div className="relative">
 
 <Navbar/>
 
 
-<div className="px-7 pt-8   desktop1:max-w-[1150px] desktop1:mx-auto ">
+<div className="relative">
+
+
+<div className="absolute w-full h-[380px] -z-10 bottom-0 left-0">
+    
+    <img src="/bg2.png" className="imageCommon object-cover" alt="" />
+
+    </div>
+
+<div className="px-7 pt-8    desktop1:max-w-[1150px] desktop1:mx-auto ">
+
+
+
+
+
 
 <p className="text-[#002045] font-bold text-[40px] leading-10 text-center sm:text-left">Dui augue lectus </p>
 
@@ -21,7 +35,7 @@ export default function SecondPage(){
 
 
 {[1,2,3].map((elem,index)=>{
-    return <div className="shadow-2xl md:w-[calc(50%-10px)] lg:w-[calc(33%-5px)] lg:max-w-[360px] relative" >
+    return <div className="shadow-2xl bg-white rounded-b-xl md:w-[calc(50%-10px)] lg:w-[calc(33%-5px)] lg:max-w-[360px] relative" >
 
 <ProductDetails index={index}  />
 
@@ -95,9 +109,10 @@ export default function SecondPage(){
 </div>
 
 
+</div>
 
 
-<Footer/>
+<Footer  />
 
 
     </div>

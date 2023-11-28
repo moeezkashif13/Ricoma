@@ -1,6 +1,11 @@
 "use client"
 
+import { useState } from "react";
+
 export const NavbarHamburger = ()=>{
+
+    const [toggleCart,setToggleCart] = useState(false)
+
 
     const showHamburger = ()=>{
 
@@ -15,8 +20,31 @@ export const NavbarHamburger = ()=>{
 
         const showCart = ()=>{
 
-            document.querySelector('.showCartComp').classList.remove('-top-[100%]')
-            document.querySelector('.showCartComp').classList.add('top-0')
+            const cartComp = document.querySelector('.showCartComp');
+            
+
+            if(window.screen.width>768){
+
+                
+if(!toggleCart){
+                cartComp.classList.remove('md:-right-[100%]')
+                cartComp.classList.add('right-4')
+
+    setToggleCart(true)
+
+}else{
+
+                cartComp.classList.remove('right-4')
+                cartComp.classList.add('md:-right-[100%]')
+    setToggleCart(false)
+}
+
+            }else{
+                
+            }
+
+                        cartComp.classList.remove('-top-[100%]')
+                        cartComp.classList.add('top-0')
 
         }
 
@@ -25,7 +53,7 @@ export const NavbarHamburger = ()=>{
 
     return <>
     
-    <div onClick={showCart} className=" w-[47px] h-[37px] relative">
+    <div onClick={showCart} className="cursor-pointer w-[47px] h-[37px] relative">
 
     <img src="/cart.svg" className="imageCommon" alt="" />
 

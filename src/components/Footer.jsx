@@ -132,7 +132,10 @@ const MobileFooter = ()=>{
 
 
 const DesktopFooter = ()=>{
-    return  <div className="bg-primary px-16">
+    return  <div className="bg-primary px-16 relative">
+
+
+
 
 
 <div className=" max-w-[1348px] mx-auto ">
@@ -215,7 +218,7 @@ export default function Footer(){
 
 <div className="hidden md:block">
 
-<DesktopFooter/>
+<DesktopFooter />
 
 </div>
 

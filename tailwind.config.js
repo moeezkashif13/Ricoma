@@ -12,8 +12,10 @@ module.exports = {
         mobile:'29px',
       },
       screens:{
-        desktop1 : '1200px'
+        desktop1 : '1200px',
+        mobile:'360px',
       },
+      
       colors:{
         primary: '#002045',
         secondary : '#E27838'

@@ -61,10 +61,10 @@ const NavigationMenuMobile = ()=>{
 
 const YourCart = ()=>{
 
-    return <div className="relative  h-full" >
+    return <div className="relative  h-full  " >
 
 
-<div className="px-6 ">
+<div className="px-6  md:px-9">
 
 
 <CloseCart/>
@@ -102,7 +102,7 @@ const YourCart = ()=>{
 <div className="flex justify-between">
 
 
-<div className="flex gap-x-5">
+<div className="flex gap-x-2 mobile:gap-x-4   items-center">
 
 <div className="w-5 h-5 rounded-full bg-[#F0F0F5] text-[#6E70FF] commonFlex">ic</div>
 <p className="text-sm leading-5 text-black">1</p>
@@ -142,7 +142,7 @@ const YourCart = ()=>{
 </div>
 
 
-<div className="flex mt-6 mb-7 text-2xl leading-7 text-black">
+<div className="flex mt-6 mb-7 md:mb-24 text-2xl leading-7 text-black">
 
 <p >Order Total</p>
 
@@ -151,7 +151,7 @@ const YourCart = ()=>{
 </div>
 
 
-<div className="bg-[#0076FF] py-3 text-center rounded-md">
+<div className="bg-[#0076FF] md:w-1/2 md:mx-auto mb-10 py-3 text-center rounded-md">
 
 Checkout
 
@@ -165,8 +165,7 @@ Checkout
 </div>
 
 
-
-<div className="absolute bottom-0  w-full  bg-red-500 text-black">
+<div className="absolute md:hidden checking bottom-0  w-full  bg-red-500 text-black">
     <YellowBanner/>
 </div>
 
@@ -191,7 +190,7 @@ export default async function Navbar(){
 </div>
 
 
-<div style={{transition:'all 0.5s'}} className="showCartComp  pt-11   bg-white w-full h-full text-white -top-[100%] z-40 fixed right-0 ">
+<div style={{transition:'all 0.5s'}} className="showCartComp  pt-11 md:pt-14   bg-white w-full h-full text-white -top-[100%] z-40 fixed right-0   md:max-w-[481px] md:h-auto md:top-[85px] md:-right-[100%] shadow-2xl ">
 <YourCart/>
 </div>
 
