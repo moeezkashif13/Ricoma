@@ -2,6 +2,15 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
+import { Rubik } from 'next/font/google'
+import Slider from '@/components/Slider'
+
+
+
+
+const RubikFont = Rubik({ subsets: ['latin'] })
+
+
 const PersonCard = ()=>{
   return   <div className=' -top-4 lg:-top-8 py-4 bg-white border border-[#EEF2F0] commonFlex flex-col relative gap-y-4 italic  lg:flex-row lg:w-full lg:justify-start lg:px-8  ' style={{boxShadow: '0px 1px 4px 0px #00000033'}}>
 
@@ -52,7 +61,7 @@ export default function Home() {
 
 {/* HEREEE */}
 
-<div className='bg-[#015DC9] pt-12 pb-[220px]'>
+<div className='bg-[#015DC9] pt-12 pb-[50px] lg:pb-[180px]'>
 
 <div className='relative  max-w-[1250px] lg:mx-auto lg:flex lg:flex-row-reverse lg:gap-x-16'>
 
@@ -85,7 +94,7 @@ export default function Home() {
 </div>
 
 
-<div  className=' absolute bg-white top-[189px] pt-5 pb-6 w-full lg:px-12 rounded-b-2xl px-mobile lg:space-y-5 '>
+<div  className=' absolute bg-white top-[189px] pt-5 pb-6 w-full lg:px-12 lg:rounded-b-2xl px-mobile lg:space-y-5 '>
 
 
 <p className='font-bold text-[22px] leading-6 text-center lg:hidden'>Fill out the form to secure the best deal!</p>
@@ -189,7 +198,7 @@ Get a free quote
 
 {/* SECONDD SIDEEE */}
 
-<div className='bg-  lg:w-1/2 relative   mt-[900px] lg:mt-0 py-36 lg:py-0'>
+<div className='bg-  lg:w-1/2 relative   mt-[900px] lg:mt-0 pt-20 pb-36 lg:py-0'>
 
 
 <div className=' mx-auto w-[330px] lg:w-full space-y-5'>
@@ -209,7 +218,7 @@ Get a free quote
 
 {/* hidden for desktop  */}
 
-<p className='font-bold text-6xl leading-[78px] text-white'>Dui augue lectus in ut at lorem</p>
+<p className='font-bold hideOnMobile text-6xl leading-[78px] text-white'>Dui augue lectus in ut at lorem</p>
 
 
 <div className='font-light leading-10 text-[24px] text-white space-y-6'>
@@ -219,8 +228,7 @@ Get a free quote
 
 
 
-<div className='h-[293px] w-[461px]  rounded-[32px] bg-center bg-cover flex justify-center items-center' style={{backgroundImage:'url(/thumbnail.jpg)'}}>
-
+<div className='h-[293px] w-[461px]   rounded-[32px] bg-center bg-cover hidden lg:flex justify-center items-center' style={{backgroundImage:'url(/thumbnail.jpg)'}}>
 
 <div className='w-[94px] h-[94px] flex justify-center items-center bg-[#E27838] rounded-full' style={{boxShadow: '0px 0px 4px 0px #00000080'}}>
   <div className='w-[34px] h-[43px] pl-2 pt-1'>
@@ -235,18 +243,18 @@ Get a free quote
 
 
 
-<div className='absolute w-[330px] lg:flex lg:w-[1250px] lg:h-[200px] lg:items-center lg:justify-between px-6 rounded-lg lg:pl-24 lg:pr-44 bg-white' style={{boxShadow: '0px 4px 22px 0px #00000040'}}>
+<div className='absolute w-[330px] lg:flex lg:w-[1250px] lg:h-[200px] lg:items-center  px-6 rounded-lg bottom-[-13%] lg:-bottom-[25%]  lg:pl-24 lg:pr-24 bg-white' style={{boxShadow: '0px 4px 22px 0px #00000040'}}>
 
-{[1,2,3].map(()=>{
-  return <div className='flex justify-center   gap-x-9 py-6  border-b-2 border-[#EEEFF2] last:border-0 lg:border-b-0 lg:border-r'>
+{[{text:'24/7',icon:'/support.svg',},{text:'30+',icon:'/icon4.png',},{text:'50%',icon:'/icon5.png',},].map((elem)=>{
+  return <div className='flex justify-center lg:w-1/3   gap-x-9 py-6  border-b-2 border-[#EEEFF2] last:border-0 lg:border-b-0 lg:border-r-2'>
 
     <div className='w-[55px] h-[55px] rounded-full bg-[#FFECEC] commonFlex'>
-      <img src="/support.svg"  alt="" />
+      <img src={elem.icon}  alt="" />
     </div>
 
 
-  <div className=' lg:pr-8'>
-    <p className='lg:font-bold lg:text-2xl lg:leading-8'>Rubik font here</p>
+  <div className={` lg:pr-8 ${RubikFont.className} `} >
+    <p className='lg:font-bold lg:text-2xl lg:leading-8'>{elem.text}</p>
     <p className='uppercase text-[#4F5665] font-semibold text-[20px] leading-8'>Lorem Ipsum</p>
   </div>
 
@@ -279,7 +287,7 @@ Get a free quote
 
 
 
-<div className='pt-56 lg:pt-16 '>
+<div className='pt-48 lg:pt-44 '>
 
 
 <div className='w-[calc(100%-15px)]  max-w-[1200px]  mx-auto'>
@@ -296,18 +304,32 @@ Get a free quote
 
 
 
-{[1,2].map(()=>{
+{[1,2].map((elem,index)=>{
+
   return <div  className='lg:w-[calc(50%-5px)] lg:max-w-[578px]' style={{boxShadow: '0px 4px 32px 0px #00000040'  }}>
 
     <div className='bg-[#0F64C8] rounded-t-[12px] font-bold text-[21px] leading-7 text-white py-3 text-center  '><p className='w-[273px] mx-auto'>Starter Single-Head Embroidery Machine</p> </div>
 
-  <div className='h-[320px] bg-[#F5F5F5] pt-5 pb-12 text-center '>
-    <div className='w-[157px] h-[182px]  mx-auto'>
+  <div className={`h-[320px] bg-[#F5F5F5] pt-5 pb-6 text-center ${index==1&&' !text-left'} px-4`}>
+
+{index==0  && <> <div className={`w-[157px] h-[182px] ${index!=1&&' mx-auto'} `}>
       <img src="/machine.png" className='imageCommon' alt="" />
     </div>
-    <p className='mt-5 mb-2 font-bold text-[19px] leading-7'>EM-1010</p>
-    <p className='text-[#E27838] font-semibold text-xs leading-6'>10 needles</p>
+    <p className={`mt-5 mb-2 font-bold text-[19px] leading-7`}>EM-1010</p>
+    <p className={`text-[#E27838] font-semibold text-xs leading-6`}>10 needles</p>
+    </>
+}
+
+{index==1&& <Slider/>}
+
+
+
+
+
   </div>
+
+
+
 
 <div className=' pb-10 space-y-3'>
   <div className='w-[311px]  mx-auto  lg:w-[calc(100%-32px)] space-y-3'>
