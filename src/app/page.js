@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import { Rubik } from 'next/font/google'
 import {PersonCardMobile, Slider} from '@/components/ClientComponents/Slider'
+import {PlayVideo, PlayVideoCloseButton } from '@/components/ClientComponents/PlayVideo'
 
 
 
@@ -56,7 +57,32 @@ export const PersonCard = ()=>{
 export default function Home() {
   return (
 
-<div className='overflow-hidden'>
+<div className='overflow-hidden relative'>
+
+
+<div className='videoPopup invisible w-full h-full fixed bg-[#00000099] z-50 commonFlex'>
+
+
+<div className=' h-[75%] max-h-[717px] w-[calc(100%-550px)]  '>
+
+<PlayVideoCloseButton/>
+
+<div className='w-full h-full  rounded-2xl relative commonFlex'>
+  <img src="/personworking.jpg" className='imageCommon' alt="" />
+
+<div className='absolute align-middle bg-[#00000066] rounded-xl   w-[183px] h-[200px] commonFlex cursor-pointer'>
+  <img src="/play.svg" width={65} alt="" />
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
 <Navbar/>
 
 {/* HEREEE */}
@@ -230,11 +256,7 @@ Get a free quote
 
 <div className='h-[293px] w-[461px]   rounded-[32px] bg-center bg-cover hidden lg:flex justify-center items-center' style={{backgroundImage:'url(/thumbnail.jpg)'}}>
 
-<div className='w-[94px] h-[94px] flex justify-center items-center bg-[#E27838] rounded-full' style={{boxShadow: '0px 0px 4px 0px #00000080'}}>
-  <div className='w-[34px] h-[43px] pl-2 pt-1'>
-    <img src="/play.svg" className='imageCommon ' alt="" />
-  </div>
-</div>
+<PlayVideo/>
 
 </div>
 
