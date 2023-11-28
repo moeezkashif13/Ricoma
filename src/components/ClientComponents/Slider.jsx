@@ -1,11 +1,13 @@
 "use client"
 
+import { PersonCard } from '@/app/page';
 import { Splide, SplideSlide,SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 
-export default function Slider(){
+export const  Slider = ()=>{
+
 
     const splideRef = useRef();
 
@@ -55,4 +57,48 @@ export default function Slider(){
     
     
     </Splide>
+}
+
+
+export const PersonCardMobile = ()=>{
+
+  const splideRef = useRef();
+
+  useEffect(()=>{
+
+    console.log(splideRef.current);
+    // splideRef.current.on( 'pagination:mounted', function ( data ) {
+    //   // You can add your class to the UL element
+    //   data.list.classList.add( 'splide__pagination--custom' );
+    
+    //   // `items` contains all dot items
+    //   data.items.forEach( function ( item ) {
+    //     item.button.textContent = String( item.page + 1 );
+    //   } );
+    // } );
+    
+
+  },[])
+
+
+  return <Splide ref={splideRef} options={{perPage:1,arrows:false,type:'loop',classes:{
+
+    pagination: 'splide__pagination customPagination',
+
+
+
+  }}}  className='z-50 hideOnDesktop -mt-16 h-full' hasTrack={false}>
+
+<SplideTrack className='pt-10 h-full z-50'>
+  
+  {[1,2,3].map((elem)=>{
+    return <SplideSlide className='z-50'><PersonCard/></SplideSlide>
+  })}
+
+  
+  </SplideTrack>  
+  
+  
+  </Splide>
+
 }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {CloseButton, NavbarHamburger} from "./NavbarHamburger";
 import { YellowBanner } from "./Footer";
-import { CloseCart } from "./CartRelated/Cart";
+import { CloseCart } from "./ClientComponents/Cart";
 
 const NavLinks = [
 

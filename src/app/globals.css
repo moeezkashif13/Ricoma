@@ -35,3 +35,21 @@
     }
   }
   
+
+
+  .customPagination{
+    
+    bottom: -24px !important;
+    gap: 10px;
+  }
+
+  .customPagination li button{
+    background-color: #00000080;
+    width: 12px;
+    height: 12px;
+  }
+
+  .customPagination li .is-active{
+    background-color: black;
+    opacity: 1;
+  }

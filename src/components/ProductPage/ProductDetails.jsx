@@ -6,7 +6,11 @@ export default function ProductDetails({index}){
 
 document.querySelectorAll('.detailsBox')[index].classList.toggle('hidden')
 
-}} className="w-8 h-8 rounded-full absolute cursor-pointer right-5 z-20 top-4  bg-white commonFlex" style={{boxShadow: '0px 4px 15px 0px #0000001A'}}></div>
+}} className="w-8 h-8 rounded-full absolute cursor-pointer right-5 z-20 top-4  bg-white commonFlex" style={{boxShadow: '0px 4px 15px 0px #0000001A'}}>
+
+<img src="/info.svg" alt="" />
+
+</div>
 
 
 <div className="detailsBox hidden  absolute cursor-pointer py-4 px-6 w-[312px] rounded-[15px] shadow-lg right-5 2xl:-right-[164px] z-20 top-14  bg-white commonFlex" style={{boxShadow: '0px 4px 15px 0px #0000001A'}}>

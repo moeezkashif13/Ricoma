@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
 import { Rubik } from 'next/font/google'
-import Slider from '@/components/Slider'
+import {PersonCardMobile, Slider} from '@/components/ClientComponents/Slider'
 
 
 
@@ -11,8 +11,8 @@ import Slider from '@/components/Slider'
 const RubikFont = Rubik({ subsets: ['latin'] })
 
 
-const PersonCard = ()=>{
-  return   <div className=' -top-4 lg:-top-8 py-4 bg-white border border-[#EEF2F0] commonFlex flex-col relative gap-y-4 italic  lg:flex-row lg:w-full lg:justify-start lg:px-8  ' style={{boxShadow: '0px 1px 4px 0px #00000033'}}>
+export const PersonCard = ()=>{
+  return   <div className=' top-0  lg:-top-8 py-4  bg-white border border-[#EEF2F0] commonFlex flex-col relative gap-y-4 italic  lg:flex-row lg:w-full lg:justify-start lg:px-8  ' style={{boxShadow: '0px 1px 4px 0px #00000033'}}>
 
   <div className='w-5 h-5 rounded-full  left-3 absolute top-2'>
     <img src="/facebook-2.png" className='imageCommon' alt="" />
@@ -304,6 +304,7 @@ Get a free quote
 
 
 
+
 {[1,2].map((elem,index)=>{
 
   return <div  className='lg:w-[calc(50%-5px)] lg:max-w-[578px]' style={{boxShadow: '0px 4px 32px 0px #00000040'  }}>
@@ -323,21 +324,18 @@ Get a free quote
 {index==1&& <Slider/>}
 
 
-
-
-
   </div>
 
 
 
 
-<div className=' pb-10 space-y-3'>
-  <div className='w-[311px]  mx-auto  lg:w-[calc(100%-32px)] space-y-3'>
+<div className=' pb-10 space-y-3 '>
 
 
-<div className='hideOnDesktop'>
-<PersonCard/>
-</div>
+  <div className='w-[311px]  mx-auto   lg:w-[calc(100%-32px)] space-y-3'>
+
+  <PersonCardMobile/>
+
 
 
 <div className="hideOnMobile  space-y-7 ">
@@ -349,7 +347,7 @@ Get a free quote
 
 
 
-<div className='flex gap-x-3 justify-center lg:hidden'>
+<div className=' gap-x-3 justify-center hidden'>
   <div className='w-3 h-3 rounded-full bg-black'></div>
   <div className='w-3 h-3 rounded-full bg-[#00000080]'></div>
 </div>
@@ -357,7 +355,7 @@ Get a free quote
 
   </div>
 
-  <p className='leading-7 max-w-[330px] lg:pb-4 lg:w-[calc(100%-32px)] lg:max-w-full lg:text-left   mx-auto text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur auctor malesuada hendrerit nec, porttitor nunc tristique. Egestas eget fermentum at eget nunc et nisi eu lorem.</p>
+  <p className='leading-7 max-w-[330px] pt-4 lg:pb-4 lg:w-[calc(100%-32px)] lg:max-w-full lg:text-left   mx-auto text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur auctor malesuada hendrerit nec, porttitor nunc tristique. Egestas eget fermentum at eget nunc et nisi eu lorem.</p>
 
 
 <div className='w-[320px] lg:w-[465px] h-[72px] commonFlex  mx-auto font-extrabold text-[19px] leading-5 text-white bg-[#FE8101]' style={{boxShadow: '0px 4px 5px -1px #EE1D240A , 0px 4px 5px -1px #1D58EE24'}}>Dolor.</div>
