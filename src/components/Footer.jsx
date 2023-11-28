@@ -2,7 +2,7 @@ export const YellowBanner = ()=><div className="bg-[#FCD002] pt-2 pb-4 gap-y-3 f
 
 
 <div>
-<p className="font-bold text-[22px] leading-6 uppercase hidden md:block">Nibh tincidunt</p>
+<p className="pt-0 lg:pt-3 font-bold text-[22px] leading-6 uppercase hidden md:block">Nibh tincidunt</p>
 <p className="font-bold text-[22px] leading-6 md:hidden ">MARCH MADNESS SALE EXPIRES SOON</p>
 </div>
 

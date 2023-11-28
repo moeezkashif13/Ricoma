@@ -205,7 +205,7 @@ Get a free quote
 
 
 {/* hidden for desktop */}
-<div className='h-[293px] w-[330px] mx-auto lg:hidden  rounded-[32px] bg-center bg-cover flex justify-center items-center' style={{backgroundImage:'url(/thumbnail.jpg)'}}>
+<div className='h-[293px]  max-w-[330px] mx-auto lg:hidden  rounded-[32px] bg-center bg-cover flex justify-center items-center' style={{backgroundImage:'url(/thumbnail.jpg)'}}>
 
 
 <div className='w-[94px] h-[94px] flex justify-center items-center bg-[#E27838] rounded-full' style={{boxShadow: '0px 0px 4px 0px #00000080'}}>
@@ -243,7 +243,7 @@ Get a free quote
 
 
 
-<div className='absolute w-[330px] lg:flex lg:w-[1250px] lg:h-[200px] lg:items-center  px-6 rounded-lg bottom-[-13%] sm:-bottom-[20%] lg:-bottom-[25%]  lg:pl-24 lg:pr-24 bg-white' style={{boxShadow: '0px 4px 22px 0px #00000040'}}>
+<div className='absolute w-[calc(100%-60px)] max-w-[330px]  lg:flex lg:w-[1250px] lg:max-w-[1250px] lg:h-[200px] lg:items-center  px-6 rounded-lg bottom-[-13%] sm:-bottom-[20%] lg:-bottom-[25%]  lg:pl-24 lg:pr-24 bg-white' style={{boxShadow: '0px 4px 22px 0px #00000040'}}>
 
 {[{text:'24/7',icon:'/support.svg',},{text:'30+',icon:'/icon4.png',},{text:'50%',icon:'/icon5.png',},].map((elem)=>{
   return <div className='flex justify-center lg:w-1/3   gap-x-9 py-6  border-b-2 border-[#EEEFF2] last:border-0 lg:border-b-0 lg:border-r-2'>
