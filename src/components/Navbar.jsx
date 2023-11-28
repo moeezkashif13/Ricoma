@@ -19,7 +19,7 @@ const NavigationMenuMobile = ()=>{
     return <div >
 
 
-<div className="flex items-center px-6">
+<div className="flex items-center px-6 ">
 <div className="flex gap-x-3 items-center">
     <Link href='/' className="w-8 h-8 rounded-md">
         <img src="/logo-2.svg" className="imageCommon" alt="" />
@@ -182,7 +182,9 @@ export default async function Navbar(){
 
 
 
-    return <div className="px-mobile bg-primary py-[19px] flex justify-between items-center relative z-40"> 
+    return <div className="bg-primary"><div className="px-mobile  py-[19px] flex justify-between items-center relative z-40 max-w-[1300px] mx-auto"> 
+
+
 
 
 <div style={{transition:'all 0.5s'}} className="fixed h-full pt-6 hiddenNav  w-[calc(100%-60px)] bg-[#002045] text-white top-0 z-40 -right-[100%]">
@@ -226,5 +228,6 @@ export default async function Navbar(){
 </div>
 
 
+    </div>
     </div>
 }

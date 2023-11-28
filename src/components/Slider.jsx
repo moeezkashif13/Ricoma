@@ -29,7 +29,7 @@ export default function Slider(){
     }} hasTrack={false}>
   
 
-  <div onClick={goToNext} className='absolute w-16 h-16 rounded-full bg-black -right-[48px] top-[35%] -translate-y-[35%] text-white cursor-pointer  z-30 commonFlex'>
+  <div onClick={goToNext} className='absolute w-12 md:w-16 h-12 md:h-16 rounded-full bg-black md:-right-[48px] right-0  top-[35%] -translate-y-[35%] text-white cursor-pointer  z-30 commonFlex'>
     <img src="/greaterthan.svg" className='pl-1' alt="" />
   </div>
 
